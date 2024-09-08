@@ -2,7 +2,7 @@ import qrcode
 import os
 
 #Data to encode
-qr_code = "youtube.com"
+qr_code = input("Input a link: ")
 
 # Creating an instance of QRCode class
 qr = qrcode.QRCode(version=1, box_size=10, border=5)
@@ -18,7 +18,7 @@ folder = "QR Codes"
 # Create the folder if it doesn't exist
 if not os.path.exists(folder):
     os.makedirs(folder)
-    
+
 # Save the image in the folder
 image_path = os.path.join(folder, 'QR.png')
 img.save(image_path)
